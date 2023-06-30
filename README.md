@@ -28,4 +28,14 @@ pip install "apache-airflow-providers-google==8.0.0"
 
 ## Airflow Installation other options 
 1. Most beneficial to gain knowledge would be a dockerized setup on your local machine.
+```
+https://hub.docker.com/r/bitnami/airflow/
+
+curl -sSL https://raw.githubusercontent.com/bitnami/containers/main/bitnami/airflow/docker-compose.yml > docker-compose.yml
+
+docker-compose up -d
+```
+
 2. An advanced but best of the breed install would be on GKE using Community helm chart, for learning do not use Bitnami.
+
+https://airflow.apache.org/docs/helm-chart/stable/index.html
