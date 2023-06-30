@@ -1,7 +1,7 @@
 # Airflow Training
-Sample Airflow Dags repo
+Cloud composer is the managed version of Apcahce Airflow and easiest way to get started.
 
-# Airflow Installation on your local machine
+## Airflow Installation on your local machine
 
 1. Enable WSL on if using a windows machine
 2. Install Python 3.8, PIP and GitBash
@@ -25,3 +25,7 @@ pip install "apache-airflow[async,postgres]==${AIRFLOW_VERSION}" --constraint "$
 # Additional providers can be installed as below.
 pip install "apache-airflow-providers-google==8.0.0"
 ```
+
+## Airflow Installation other options 
+1. Most beneficial to gain knowledge would be a dockerized setup on your local machine.
+2. An advanced but best of the breed install would be on GKE using Community helm chart, for learning do not use Bitnami.
