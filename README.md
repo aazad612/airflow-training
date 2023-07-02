@@ -39,3 +39,8 @@ docker-compose up -d
 2. An advanced but best of the breed install would be on GKE using Community helm chart, for learning do not use Bitnami.
 
 https://airflow.apache.org/docs/helm-chart/stable/index.html
+
+3. To remove files newly added to .gitignore
+
+git rm --cached `git ls-files -i -c --exclude-from=.gitignore`
+
