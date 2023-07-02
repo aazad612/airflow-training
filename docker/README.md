@@ -14,4 +14,30 @@ mkdir -p ./dags ./logs ./plugins ./config
 
 docker compose up airflow-init
 
+# Test database setup 
+
+A Postgres Database is created with several datasets for testing purposes 
+
+https://hub.docker.com/r/aa8y/postgres-dataset/
+
+```bash
+docker run -d --name pg-test -p 5432:5432 aa8y/postgres-dataset
+docker exec -it pg-test bash
+
+$ psql 
+
+postgres=# 
+\l
+ALTER USER postgres PASSWORD 'pass1234';
+\q
+
+$ exit
+
+# to delete the container
+
+docker stop pg-test; docker rm pg-test
+
+```
+
+
 
