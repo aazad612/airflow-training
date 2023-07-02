@@ -37,6 +37,7 @@ $ exit
 
 docker stop pg-test; docker rm pg-test
 
+docker system prune
 ```
 
 
