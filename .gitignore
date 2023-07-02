@@ -2,4 +2,3 @@
 docker/logs/*
 plugins/*
 docker/dags/day01/__pycache__/
-docker/dags/day01/__init__.py
