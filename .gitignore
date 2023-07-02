@@ -1,3 +1,4 @@
 
 docker/logs/*
 plugins/*
+docker/dags/__pycache__/
