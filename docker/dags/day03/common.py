@@ -21,3 +21,4 @@ CSV_FILE_PATH = f'{CUR_DIR}/csvs/tablist.csv'
 GCP_CONN_ID = 'google_cloud_default'
 PG_CONN_ID = 'postgres_default'
 
+# PROJECT_ID = os.environ.get("GCP_PROJECT_ID")
