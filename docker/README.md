@@ -23,6 +23,7 @@ https://hub.docker.com/r/aa8y/postgres-dataset/
 ```bash
 docker run -d --name pg-test -p 5432:5432 aa8y/postgres-dataset
 docker exec -it pg-test bash
+docker inspect pg-test | grep IPAddress
 
 $ psql 
 

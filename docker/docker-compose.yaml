@@ -103,13 +103,13 @@ services:
   
   
 
-  postgrestest:
-    image: aa8y/postgres-dataset
-    environment:
-      POSTGRES_USER: test
-      POSTGRES_PASSWORD: test
-      POSTGRES_DB: test
-    restart: always
+  # postgrestest:
+  #   image: aa8y/postgres-dataset
+  #   environment:
+  #     POSTGRES_USER: test
+  #     POSTGRES_PASSWORD: test
+  #     POSTGRES_DB: test
+  #   restart: always
 
   redis:
     image: redis:latest

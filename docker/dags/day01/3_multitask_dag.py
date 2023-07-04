@@ -5,7 +5,7 @@ from airflow.operators.bash import BashOperator
 from airflow.operators.python_operator import PythonOperator
 
 with DAG(
-    "01_bash_dag",
+    "03_multi_task_dag",
     schedule=None, 
     start_date=datetime.datetime(2023,6,6)
 ) as dag:
