@@ -15,22 +15,11 @@ CUR_DIR = os.path.abspath(os.path.dirname(__file__))
 sys.path.append(f'{CUR_DIR}')
 sys.path.append(f'{CUR_DIR}/..')
 
-CSV_FILE_PATH = f'{CUR_DIR}/csvs/tablist.csv'
+from common import (default_args, GCS_BUCKET, CSV_FILE_PATH)
 
-GCS_BUCKET = 'mentor-airflow-training'
-
-default_args = {
-    'owner': 'Johney Aazad',
-    'depends_on_past': False,
-    'email_on_retry': False,
-    'retries': 0,
-    'start_date': datetime(2023,6,6),
-    'catchup': False,
-    'concurrency': 4,
-}
 
 with DAG(
-    "13_proc_files",
+    "23_proc_files",
     schedule = None, 
     start_date = datetime.datetime(2023,6,6),
     default_args = default_args,

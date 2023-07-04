@@ -14,3 +14,10 @@ default_args = {
     'catchup': False,
     'concurrency': 4,
 }
+
+
+GCS_BUCKET = 'mentor-airflow-training'
+CSV_FILE_PATH = f'{CUR_DIR}/csvs/tablist.csv'
+GCP_CONN_ID = 'google_cloud_default'
+PG_CONN_ID = 'postgres_default'
+
