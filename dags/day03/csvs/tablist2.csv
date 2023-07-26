@@ -1,0 +1,13 @@
+tablename
+dag_code
+dag_pickle
+serialized_dag
+dag_schedule_dataset_reference
+dag
+dataset_dag_run_queue
+dag_run
+dag_tag
+dag_owner_attributes
+dag_warning
+dagrun_dataset_event
+dag_run_note
