@@ -1,43 +1,38 @@
-
+# import standard modules
+import os
+import sys
+from pathlib import Path
 import datetime
 
+# import Operators
 from airflow.models import DAG
 from airflow.utils.task_group import TaskGroup
 from airflow.contrib.hooks.gcs_hook import GoogleCloudStorageHook
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.providers.google.cloud.transfers.gcs_to_bigquery import GCSToBigQueryOperator
 
-import os
-import sys
-from pathlib import Path
-
+# set python path
 CUR_DIR = os.path.abspath(os.path.dirname(__file__))
 sys.path.append(f'{CUR_DIR}')
 sys.path.append(f'{CUR_DIR}/..')
 
-CSV_FILE_PATH = f'{CUR_DIR}/csvs/tablist.csv'
+# Imports common to the dags
+from common import (
+    default_args, 
+    GCS_BUCKET, 
+    CSV_FILE_PATH
+    )
 
-GCS_BUCKET = 'mentor-airflow-training'
-
-default_args = {
-    'owner': 'Johney Aazad',
-    'depends_on_past': False,
-    'email_on_retry': False,
-    'retries': 0,
-    'start_date': datetime(2023,6,6),
-    'catchup': False,
-    'concurrency': 4,
-}
-
+# DAG Definition
 with DAG(
-    "13_proc_files",
+    "24_gcs_to_bq",
     schedule = None, 
     start_date = datetime.datetime(2023,6,6),
     default_args = default_args,
     concurrency = 2,
 ) as dag:
 
-
+    # Tasks creation
     hook = GoogleCloudStorageHook()
     list_of_files = hook.list(GCS_BUCKET)
 
@@ -46,9 +41,6 @@ with DAG(
 
     with TaskGroup ('process_files') as process_files:
         for file_name in list_of_files:
-            # dummy_task = DummyOperator(
-            #     task_id=f'dummy_task{file_name}',
-            #     )
 
             table_name = Path(file_name).stem
 

@@ -5,7 +5,7 @@ Cloud composer is the managed version of Apcahce Airflow and easiest way to get 
 
 If you are running a windows machine, please enable WSL and install Python 3.8, PIP and GitBash.
 
-```
+```bash
 virtualenv -p airflow_venv26
 source airflow_venv26/bin/activate
 

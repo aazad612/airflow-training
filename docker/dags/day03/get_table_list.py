@@ -25,7 +25,7 @@ default_args = {
 }
 
 with DAG(
-    "11_get_table_list",
+    "get_table_list",
     schedule = None, 
     start_date = datetime.datetime(2023,6,6),
     default_args = default_args,
