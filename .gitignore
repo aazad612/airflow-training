@@ -2,3 +2,4 @@
 docker/logs/*
 plugins/*
 docker/dags/day01/__pycache__/
+.terraform
