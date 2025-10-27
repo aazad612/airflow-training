@@ -15,3 +15,4 @@ with DAG(
     )
 
     bash_task
+

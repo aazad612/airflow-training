@@ -1,5 +1,3 @@
-# Airflow Training
-Cloud composer is the managed version of Apcahce Airflow and easiest way to get started. But to learn more we would do a manual install. 
 
 ## Airflow Install on local machine or compute VM (used for this training)
 
