@@ -6,8 +6,8 @@ terraform {
 }
 
 provider "google" {
-    credentials = "${file("/Users/johneyaazad/gcloud/learn-by-doing-data-engg-cfe.json")}"
-  project = var.project_id
-  region  = var.region
-  zone    = var.zone
+  credentials = file("/Users/johneyaazad/gcloud/learn-by-doing-data-engg-cfe.json")
+  project     = var.project_id
+  region      = var.region
+  zone        = var.zone
 }

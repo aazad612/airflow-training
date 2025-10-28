@@ -28,3 +28,8 @@ variable "imdb_prefix" {
   default     = "imdb"
 }
 
+variable "gcp_service_list" {
+  type        = list(string)
+  description = "The list of apis necessary for the project"
+  default     = ["storage.googleapis.com"]
+}

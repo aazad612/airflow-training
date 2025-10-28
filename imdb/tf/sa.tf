@@ -1,7 +1,4 @@
-
-
 resource "google_service_account" "etl" {
-#   project      = var.project_id
   account_id   = "${var.imdb_prefix}-etl-sa"
   display_name = "IMDb Data Pipeline Service Account"
   description  = "Service account for Dataflow and Composer IMDb pipeline"
